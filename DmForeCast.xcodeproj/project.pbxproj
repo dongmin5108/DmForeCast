@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A50A84726556B1800745241 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50A84626556B1800745241 /* Common.swift */; };
 		7A8D81C326552762007C460C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D81C226552762007C460C /* AppDelegate.swift */; };
 		7A8D81C526552762007C460C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D81C426552762007C460C /* SceneDelegate.swift */; };
 		7A8D81C726552762007C460C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D81C626552762007C460C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A50A84626556B1800745241 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7A8D81BF26552762007C460C /* DmForeCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DmForeCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8D81C226552762007C460C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8D81C426552762007C460C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				7A8D81CB26552762007C460C /* Assets.xcassets */,
 				7A8D81CD26552762007C460C /* LaunchScreen.storyboard */,
 				7A8D81D026552762007C460C /* Info.plist */,
+				7A50A84626556B1800745241 /* Common.swift */,
 			);
 			path = DmForeCast;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A50A84726556B1800745241 /* Common.swift in Sources */,
 				7A8D81C726552762007C460C /* ViewController.swift in Sources */,
 				7A8D81C326552762007C460C /* AppDelegate.swift in Sources */,
 				7A8D81C526552762007C460C /* SceneDelegate.swift in Sources */,
