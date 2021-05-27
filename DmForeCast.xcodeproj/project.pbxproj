@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A11FC6B265FAEDA00E38FE8 /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11FC6A265FAEDA00E38FE8 /* SummaryTableViewCell.swift */; };
 		7A50A84726556B1800745241 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A50A84626556B1800745241 /* Common.swift */; };
 		7A8D81C326552762007C460C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D81C226552762007C460C /* AppDelegate.swift */; };
 		7A8D81C526552762007C460C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D81C426552762007C460C /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A11FC6A265FAEDA00E38FE8 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		7A50A84626556B1800745241 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7A8D81BF26552762007C460C /* DmForeCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DmForeCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8D81C226552762007C460C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A11FC69265FAE9F00E38FE8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7A11FC6A265FAEDA00E38FE8 /* SummaryTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		7A8D81B626552761007C460C = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		7A8D81C126552762007C460C /* DmForeCast */ = {
 			isa = PBXGroup;
 			children = (
+				7A11FC69265FAE9F00E38FE8 /* Cell */,
 				7A8D81C226552762007C460C /* AppDelegate.swift */,
 				7A8D81C426552762007C460C /* SceneDelegate.swift */,
 				7A8D81C626552762007C460C /* ViewController.swift */,
@@ -143,6 +154,7 @@
 				7A50A84726556B1800745241 /* Common.swift in Sources */,
 				7A8D81C726552762007C460C /* ViewController.swift in Sources */,
 				7A8D81C326552762007C460C /* AppDelegate.swift in Sources */,
+				7A11FC6B265FAEDA00E38FE8 /* SummaryTableViewCell.swift in Sources */,
 				7A8D81C526552762007C460C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
