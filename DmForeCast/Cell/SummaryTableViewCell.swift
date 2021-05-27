@@ -9,6 +9,21 @@ import UIKit
 
 class SummaryTableViewCell: UITableViewCell {
 
+    //타입 프로퍼티
+    static let identifier = "SummaryTableViewCell"
+    
+    
+    @IBOutlet weak var weatherImageView: UIImageView!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    @IBOutlet weak var minMaxLabel: UILabel!
+    
+    @IBOutlet weak var currentTemperatureLabel: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
