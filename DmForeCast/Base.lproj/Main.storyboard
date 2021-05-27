@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="JxF-Mo-9Qs">
             <objects>
-                <viewController id="C3S-cY-0u7" sceneMemberID="viewController">
+                <viewController id="C3S-cY-0u7" customClass="ViewController" customModule="DmForeCast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8eN-Fz-adl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,6 +191,9 @@
                             <constraint firstAttribute="bottom" secondItem="x5F-AR-Lty" secondAttribute="bottom" id="zZc-av-zlH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="listTableView" destination="1eI-gw-J7l" id="9Jv-2N-pFk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="miM-NF-IEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
