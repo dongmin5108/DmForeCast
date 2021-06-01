@@ -31,6 +31,7 @@
 		7A8D81CB26552762007C460C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A8D81CE26552762007C460C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A8D81D026552762007C460C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AF4C2B226667BB9001AD056 /* ForecastApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ForecastApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				7A11FC72265FF79A00E38FE8 /* CurrentWeatherApi.playground */,
+				7AF4C2B226667BB9001AD056 /* ForecastApi.playground */,
 			);
 			path = Api;
 			sourceTree = "<group>";
