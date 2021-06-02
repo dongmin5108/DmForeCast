@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
@@ -15,7 +16,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
+        WeatherDataSource.shared.fetch(location: location) {
+            self.listTableView.reloadData()
+        }
     }
 
 
@@ -44,8 +49,20 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //SummaryTableViewCell 출력
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryTableViewCell", for: indexPath)
-            as! SummaryTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryTableViewCell", for: indexPath) as! SummaryTableViewCell
+            
+            //첫번째 셀에 날씨 표시
+            if let weather = WeatherDataSource.shared.summary?.weather.first, let main = WeatherDataSource.shared.summary?.main {
+                //이미지뷰 출력weather.icon
+                cell.weatherImageView.image = UIImage(named: weather.icon)
+                //레이블에 출력
+                cell.statusLabel.text = weather.description
+                //최고기온,최소기온 출력
+                cell.minMaxLabel.text = "최고\(main.temp_max.temperatureString)  최소 \(main.temp_min.temperatureString)"
+                //현재 온도 출력
+                cell.currentTemperatureLabel.text = "\(main.temp.temperatureString)"
+                
+            }
             
             //셀을 리턴
             return cell
