@@ -37,8 +37,8 @@ extension ViewController: UITableViewDataSource {
             return 1
         //2번째 섹션은 예보 데이터 출력
         case 1:
-            //예보의 숫자만큼 리턴 (나중에 수정)
-            return 0
+            //예보의 숫자만큼 리턴
+            return WeatherDataSource.shared.forecastList.count
         default:
             return 0
             
@@ -71,6 +71,13 @@ extension ViewController: UITableViewDataSource {
         
         //ForecastTableViewCell 리턴
         let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastTableViewCell", for: indexPath) as! ForecastTableViewCell
+        
+        let target = WeatherDataSource.shared.forecastList[indexPath.row]
+        cell.dataLabel.text = target.date.dateString
+        cell.timeLabel.text = target.date.timeString
+        cell.weatherImage.image = UIImage(named: target.icon)
+        cell.statusLabel.text = target.weather
+        cell.temperatureLabel.text = target.temperature.temperatureString
         
         //cell 리턴
         return cell
