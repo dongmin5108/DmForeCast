@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var listTableView: UITableView!
     
+    //공백
     var topInset = CGFloat(0.0)
     
     //view의 위치 배치가 완료된 다음 호출
@@ -37,6 +38,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //backgroundColor 설정 (clear Color로 설정)
+        listTableView.backgroundColor = .clear
+        //separator 설정 x 
+        listTableView.separatorStyle = .none
+        //스크롤바 설정 x
+        listTableView.showsVerticalScrollIndicator = false
        
         let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
         WeatherDataSource.shared.fetch(location: location) {
