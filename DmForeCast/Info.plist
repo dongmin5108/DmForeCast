@@ -64,6 +64,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>현재 위치의 날씨 정보를 표시 합니다.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>현재 위치의 날씨 정보를 표시 합니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>현재 위치의 날씨 정보를 표시 합니다.</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

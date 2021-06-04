@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0684F6266A2E0100078A75 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0684F5266A2E0100078A75 /* LocationManager.swift */; };
 		7A11FC6B265FAEDA00E38FE8 /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11FC6A265FAEDA00E38FE8 /* SummaryTableViewCell.swift */; };
 		7A11FC6F265FED1300E38FE8 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11FC6E265FED1300E38FE8 /* ForecastTableViewCell.swift */; };
 		7A2346C82667938800E7E2AA /* Double+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2346C72667938800E7E2AA /* Double+Formatter.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A0684F5266A2E0100078A75 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		7A11FC6A265FAEDA00E38FE8 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		7A11FC6E265FED1300E38FE8 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		7A11FC72265FF79A00E38FE8 /* CurrentWeatherApi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CurrentWeatherApi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A0684F4266A2DE700078A75 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				7A0684F5266A2E0100078A75 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		7A11FC69265FAE9F00E38FE8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		7A8D81C126552762007C460C /* DmForeCast */ = {
 			isa = PBXGroup;
 			children = (
+				7A0684F4266A2DE700078A75 /* Location */,
 				7A2346C62667935C00E7E2AA /* Formatter */,
 				7AF4C2BF266685AE001AD056 /* Data */,
 				7AF4C2B426668479001AD056 /* Model */,
@@ -220,6 +231,7 @@
 				7AF4C2C1266685C8001AD056 /* WeatherDataSource.swift in Sources */,
 				7A11FC6B265FAEDA00E38FE8 /* SummaryTableViewCell.swift in Sources */,
 				7A8D81C526552762007C460C /* SceneDelegate.swift in Sources */,
+				7A0684F6266A2E0100078A75 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
