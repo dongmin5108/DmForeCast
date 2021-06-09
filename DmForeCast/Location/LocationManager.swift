@@ -21,7 +21,24 @@ class LocationManager: NSObject {
     
     let manager:CLLocationManager
     
-    var currentLocationTitle: String?
+    var currentLocationTitle: String? {
+        //프로퍼티 옵저버 추가
+        didSet {
+            //좌표를 담을 dictionary
+            var userInfo = [AnyHashable: Any]()
+            //currentLocation이 정상적 으로 저장 되어 있다면
+            if let location = currentLocation {
+                
+                userInfo["location"] = location
+            }
+            
+            NotificationCenter.default.post(name: Self.currentLocationDidUpdate, object: nil, userInfo: userInfo)
+        }
+    }
+    
+    var currentLocation: CLLocation?
+    
+    static let currentLocationDidUpdate = Notification.Name(rawValue: "currentLocationDidUpdate")
     
     //외부에서 호출하는 메소드
     func updateLocation() {
@@ -117,6 +134,7 @@ extension LocationManager: CLLocationManagerDelegate {
         print(locations.last)
         
         if let location = locations.last {
+            currentLocation = location
             updateAddress(from: location)
         }
     }

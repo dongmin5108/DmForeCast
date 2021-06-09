@@ -10,6 +10,7 @@ import CoreLocation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var locationLabel: UILabel!
     
     @IBOutlet weak var listTableView: UITableView!
     
@@ -46,13 +47,20 @@ class ViewController: UIViewController {
         //스크롤바 설정 x
         listTableView.showsVerticalScrollIndicator = false
        
-        let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
-        WeatherDataSource.shared.fetch(location: location) {
-            self.listTableView.reloadData()
-        }
+//        //고정된 임시 좌표를 이용해 api를 불러오기
+//        let location = CLLocation(latitude: 37.498206, longitude: 127.02761)
+//        WeatherDataSource.shared.fetch(location: location) {
+//            self.listTableView.reloadData()
+//        }
         
         
         LocationManager.shared.updateLocation()
+        
+        NotificationCenter.default.addObserver(forName: WeatherDataSource.weatherInfoDidUpdate, object: nil, queue: .main) { (noti) in
+            self.listTableView.reloadData()
+            //Label에 Location 값을 저장
+            self.locationLabel.text = LocationManager.shared.currentLocationTitle
+        }
         
     }
 
