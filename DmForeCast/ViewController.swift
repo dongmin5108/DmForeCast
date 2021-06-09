@@ -10,8 +10,9 @@ import CoreLocation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var listTableView: UITableView!
     
     //공백
@@ -40,6 +41,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //시작시점 TableView를 숨기고 loader를 출력 (0.0은 화면을 숨김)
+        listTableView.alpha = 0.0
+        //loader를 화면에 표시
+        loader.alpha = 1.0
+        
+        
         //backgroundColor 설정 (clear Color로 설정)
         listTableView.backgroundColor = .clear
         //separator 설정 x 
@@ -60,6 +67,11 @@ class ViewController: UIViewController {
             self.listTableView.reloadData()
             //Label에 Location 값을 저장
             self.locationLabel.text = LocationManager.shared.currentLocationTitle
+            
+            UIView.animate(withDuration: 3.0) {
+                self.listTableView.alpha = 1.0
+                self.loader.alpha = 0.0
+            }
         }
         
     }

@@ -173,12 +173,17 @@
                                     <outlet property="dataSource" destination="C3S-cY-0u7" id="RvB-GJ-owI"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="18g-gN-JSe">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OlA-P7-49L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dS6-iW-QZv" firstAttribute="bottom" secondItem="x5F-AR-Lty" secondAttribute="bottom" id="2F4-vj-jpF"/>
                             <constraint firstItem="Zye-RD-VnH" firstAttribute="leading" secondItem="OlA-P7-49L" secondAttribute="leading" id="2xF-IQ-qRK"/>
+                            <constraint firstItem="18g-gN-JSe" firstAttribute="centerY" secondItem="8eN-Fz-adl" secondAttribute="centerY" id="8HC-zS-K4l"/>
                             <constraint firstItem="dS6-iW-QZv" firstAttribute="trailing" secondItem="x5F-AR-Lty" secondAttribute="trailing" id="9t6-UU-Bid"/>
                             <constraint firstItem="Zye-RD-VnH" firstAttribute="trailing" secondItem="OlA-P7-49L" secondAttribute="trailing" id="AG3-lq-z0n"/>
                             <constraint firstItem="x5F-AR-Lty" firstAttribute="top" secondItem="8eN-Fz-adl" secondAttribute="top" id="EjJ-xn-Xzw"/>
@@ -187,6 +192,7 @@
                             <constraint firstItem="Zye-RD-VnH" firstAttribute="top" secondItem="OlA-P7-49L" secondAttribute="top" id="e8a-5X-goO"/>
                             <constraint firstItem="OlA-P7-49L" firstAttribute="bottom" secondItem="1eI-gw-J7l" secondAttribute="bottom" id="pAW-wp-HEB"/>
                             <constraint firstItem="dS6-iW-QZv" firstAttribute="leading" secondItem="x5F-AR-Lty" secondAttribute="leading" id="poB-oB-vSc"/>
+                            <constraint firstItem="18g-gN-JSe" firstAttribute="centerX" secondItem="8eN-Fz-adl" secondAttribute="centerX" id="qww-BC-lS0"/>
                             <constraint firstItem="1eI-gw-J7l" firstAttribute="top" secondItem="Zye-RD-VnH" secondAttribute="bottom" id="rNc-zQ-jtp"/>
                             <constraint firstItem="x5F-AR-Lty" firstAttribute="leading" secondItem="OlA-P7-49L" secondAttribute="leading" id="tZg-3L-RBv"/>
                             <constraint firstItem="dS6-iW-QZv" firstAttribute="top" secondItem="x5F-AR-Lty" secondAttribute="top" id="tpF-ke-nAH"/>
@@ -196,6 +202,7 @@
                     </view>
                     <connections>
                         <outlet property="listTableView" destination="1eI-gw-J7l" id="9Jv-2N-pFk"/>
+                        <outlet property="loader" destination="18g-gN-JSe" id="750-tO-V9U"/>
                         <outlet property="locationLabel" destination="ePE-2R-vth" id="YKK-A5-HQs"/>
                     </connections>
                 </viewController>
