@@ -21,6 +21,8 @@ class LocationManager: NSObject {
     
     let manager:CLLocationManager
     
+    var currentLocationTitle: String?
+    
     //외부에서 호출하는 메소드
     func updateLocation() {
         let status: CLAuthorizationStatus
@@ -60,6 +62,30 @@ extension LocationManager: CLLocationManagerDelegate {
         manager.requestLocation()
     }
     
+    private func updateAddress(from location: CLLocation) {
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { [weak self](placemarks, error) in
+            //에러 확인
+            if let error = error {
+                //에러가 있으면 print 로 출력
+                print(error)
+                self?.currentLocationTitle = "Unknown"
+                return
+            }
+            //에러가 없으면 첫번째 파라미터로 배열이 전달
+            if let placemark = placemarks?.first {
+                if let gu = placemark.locality, let dong = placemark.subLocality {
+                    self?.currentLocationTitle = "\(gu) \(dong)"
+                //값이 없다면
+                }else{
+                    self?.currentLocationTitle = placemark.name ?? "Unknown"
+                }
+            }
+            
+            print(self?.currentLocationTitle)
+        }
+    }
+    
     //iOS 14 이상 버전부터 실행되는 메소드
     @available(iOS 14.0, *)
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -89,6 +115,10 @@ extension LocationManager: CLLocationManagerDelegate {
     //새로운 위치 정보가 전달되면 반복적으로 호출 didUpdateLocations
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(locations.last)
+        
+        if let location = locations.last {
+            updateAddress(from: location)
+        }
     }
     
     //위치에 에러가 있을 시 호출되는 메소드 didFailWithError
